@@ -1,6 +1,8 @@
 const mainhtml = document.querySelector('.main')
-const items = document.querySelectorAll('.item')
-const placeholders = document.querySelectorAll('.placeholder')
+// let items = document.querySelectorAll('.item')
+// let placeholders = document.querySelectorAll('.placeholder')
+let item
+let placeholder
 const openModalWindowForNewTask = document.querySelector('.btn')
 const addTaskBtn = document.querySelector('.add_btn')
 const modalWindow = document.querySelector('.modal-window')
@@ -8,6 +10,9 @@ const newTaskInput = document.querySelector('.input')
 const closeModalWindow = document.querySelector('.close_btn')
 
 openModalWindowForNewTask.addEventListener('click', openModalWindow)
+
+makeAddEventListenersForItems()
+makeAddEventListenersForPlaceholders()
 
 addTaskBtn.addEventListener('click', (e) => {
     e.preventDefault()
@@ -17,16 +22,24 @@ addTaskBtn.addEventListener('click', (e) => {
 
 closeModalWindow.addEventListener('click', closeModalWindowFunc)
 
-for (const item of items) {
-    item.addEventListener('dragstart', dragstart)
-    item.addEventListener('dragend', dragend)
+
+
+function makeAddEventListenersForItems () {
+    items = document.querySelectorAll('.item')
+    for (const item of items) {
+        item.addEventListener('dragstart', dragstart)
+        item.addEventListener('dragend', dragend)
+    }
 }
 
-for (const placeholder of placeholders) {
-    placeholder.addEventListener('dragover', dragover)
-    placeholder.addEventListener('dragenter', dragenter)
-    placeholder.addEventListener('dragleave', dragleave)
-    placeholder.addEventListener('drop', dragdrop)
+function makeAddEventListenersForPlaceholders () {
+    placeholders = document.querySelectorAll('.placeholder')
+    for (const placeholder of placeholders) {
+        placeholder.addEventListener('dragover', dragover)
+        placeholder.addEventListener('dragenter', dragenter)
+        placeholder.addEventListener('dragleave', dragleave)
+        placeholder.addEventListener('drop', dragdrop)
+    }
 }
 
 function openModalWindow () {
@@ -44,6 +57,8 @@ function insertNewTask (newTask) {
     startColumn.insertAdjacentHTML('afterend', 
     `<div class="item" draggable="true">${newTask}</div>`
     )
+    makeAddEventListenersForItems()
+    makeAddEventListenersForPlaceholders()
 }
 
 function dragstart (event) {
