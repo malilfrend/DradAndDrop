@@ -1,19 +1,21 @@
 const mainhtml = document.querySelector('.main')
 const items = document.querySelectorAll('.item')
 const placeholders = document.querySelectorAll('.placeholder')
-const addNewTaskBtn = document.querySelector('.btn')
+const openModalWindowForNewTask = document.querySelector('.btn')
 const addTaskBtn = document.querySelector('.add_btn')
 const modalWindow = document.querySelector('.modal-window')
+const newTaskInput = document.querySelector('.input')
+const closeModalWindow = document.querySelector('.close_btn')
 
-// modalWindow.classList.add('modal_hide')
-
-addNewTaskBtn.addEventListener('click', openModalWindow)
+openModalWindowForNewTask.addEventListener('click', openModalWindow)
 
 addTaskBtn.addEventListener('click', (e) => {
     e.preventDefault()
-    let newTask = document.querySelector('.input').value
-    insertNewTask(newTask)
+    insertNewTask(newTaskInput.value)
+    newTaskInput.value = ''
 })
+
+closeModalWindow.addEventListener('click', closeModalWindowFunc)
 
 for (const item of items) {
     item.addEventListener('dragstart', dragstart)
@@ -30,6 +32,11 @@ for (const placeholder of placeholders) {
 function openModalWindow () {
     modalWindow.classList.remove('modal_hide')
     modalWindow.classList.add('modal_flex')
+}
+
+function closeModalWindowFunc () {
+    modalWindow.classList.remove('modal_flex')
+    modalWindow.classList.add('modal_hide')
 }
 
 function insertNewTask (newTask) {

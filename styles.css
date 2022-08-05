@@ -186,9 +186,6 @@ body {
   height: 30vh;
   top: 40%;
   left: 35%;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
   border-radius: 20px;
 }
 .form {
@@ -213,6 +210,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
+.close_btn {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  cursor: pointer;
+}
 
