@@ -94,6 +94,7 @@ body {
 .header>h1 {
   flex-grow: 1;
   padding: 10px;
+  padding-left: 6.5vw;
 }
 .header .btn {
   padding: 10px;
@@ -218,5 +219,6 @@ body {
   right: 25px;
   top: 15px;
   cursor: pointer;
+  font-size: 1.5rem
 }
 
