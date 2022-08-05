@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag & Drop | Проект 2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>This is Drag'n'drop</h1>
+        <button class="btn">Create task</button>
+      </header>
+      <main class="main">
+        <div class="column tasks">
+          <div class="col-header start">Tasks</div>
+          <div class="item" draggable="true">Погулять с собакой</div>
+          <div class="item" draggable="true">Погулять с собакой</div>
+          <div class="item" draggable="true">Погулять с собакой</div>
+          <div class="item" draggable="true">Погулять с собакой</div>
+          <div class="item" draggable="true">Погулять с собакой</div>
+          <div class="placeholder"></div>
+        </div>
+        <div class="column in-progress">
+          <div class="col-header progress">In progress</div>
+          <div class="placeholder"></div>
+        </div>
+        <div class="column finish">
+          <div class="col-header done">Done</div>
+          <div class="placeholder"></div>
+        </div>
+      </main>
+      <footer class="footer">
+        <h3>Made by Alesha Chebykin</h3>
+      </footer>
+    </div>
+    <div class="modal-window modal_hide">
+      <form action="" class="form">
+        <label for="input" class="modal">Insert task</label>
+        <input type="text" class="input modal">
+        <button class="add_btn modal">Add</button>
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

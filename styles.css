@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #828282;
+}
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background: black;
+  color: yellow;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.header>h1 {
+  flex-grow: 1;
+  padding: 10px;
+}
+.header .btn {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.main {
+  display: flex;
+  flex: 1 0 auto;
+  align-self: center;
+}
+
+.column {
+  margin-right: 15vw;
+  text-align: center;
+}
+.column:last-child {
+  margin-right: 0;
+}
+.col-header {
+  text-align: center;
+  width: 12rem;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.item {
+  width: 12rem;
+  height: 4.2rem;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: black;
+  padding: 0.8rem 1rem;
+  color: yellow;
+  text-align: center;
+  cursor: grab;
+  margin-bottom: 3vh;
+}
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 12rem;
+  height: 30vh;
+}
+.footer {
+  background-color: black;
+  color: yellow;
+  padding: 1.5vh 1.5vw;
+  font-size: 1rem;
+  flex: 0 0 auto;
+}
+.start {
+  background-color: black;
+}
+
+.progress {
+  background-color: black;
+}
+
+.done {
+  background-color: black;
+}
+
+.hold {
+  border: 5px solid #eee;
+  background-color: white;
+}
+.hide {
+  display: none;
+}
+
+.hovered {
+  border-top: 2px solid yellow;
+}
+
+.modal-window {
+  position: absolute;
+  background-color: white;
+  width: 30vw;
+  height: 30vh;
+  top: 40%;
+  left: 35%;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+  border-radius: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.modal {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+.input {
+  line-height: 20px;
+}
+.modal_hide {
+  display: none;
+}
+
+.modal_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
