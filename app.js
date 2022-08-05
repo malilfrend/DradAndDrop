@@ -6,6 +6,7 @@ const modalWindow = document.querySelector('.modal-window')
 const newTaskInput = document.querySelector('.input')
 const closeModalWindow = document.querySelector('.close_btn')
 const startColumn = document.querySelector('.start')
+let tasksArr = []
 let items
 
 for (const placeholder of placeholders) {
@@ -52,6 +53,10 @@ function insertNewTask (newTask, startColumn, items) {
         )
          makeAddEventListenersForItems(items)
     }
+}
+
+function addTaskInLocalStorage () {
+    
 }
 
 function dragstart (event) {
