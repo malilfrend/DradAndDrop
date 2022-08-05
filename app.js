@@ -17,7 +17,7 @@ for (const placeholder of placeholders) {
 
 makeAddEventListenersForItems(items)
 
-openModalWindowForNewTask.addEventListener('click', openModalWindow)
+openModalWindowForNewTask.addEventListener('click', () => {openModalWindow(modalWindow)})
 
 addTaskBtn.addEventListener('click', (e) => {
     e.preventDefault()
@@ -25,7 +25,7 @@ addTaskBtn.addEventListener('click', (e) => {
     newTaskInput.value = ''
 })
 
-closeModalWindow.addEventListener('click', closeModalWindowFunc)
+closeModalWindow.addEventListener('click', () => {closeModalWindowFunc(modalWindow)})
 
 function makeAddEventListenersForItems (items) {
     items = document.querySelectorAll('.item')
@@ -35,12 +35,12 @@ function makeAddEventListenersForItems (items) {
     }
 }
 
-function openModalWindow () {
+function openModalWindow (modalWindow) {
     modalWindow.classList.remove('modal_hide')
     modalWindow.classList.add('modal_flex')
 }
 
-function closeModalWindowFunc () {
+function closeModalWindowFunc (modalWindow) {
     modalWindow.classList.remove('modal_flex')
     modalWindow.classList.add('modal_hide')
 }
