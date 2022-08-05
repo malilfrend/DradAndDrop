@@ -46,10 +46,12 @@ function closeModalWindowFunc (modalWindow) {
 }
 
 function insertNewTask (newTask, startColumn, items) {
-    startColumn.insertAdjacentHTML('afterend', 
-        `<div class="item" draggable="true">${newTask}</div>`
-    )
-    makeAddEventListenersForItems(items)
+    if (newTask !== '') {
+        startColumn.insertAdjacentHTML('afterend', 
+             `<div class="item" draggable="true">${newTask}</div>`
+        )
+         makeAddEventListenersForItems(items)
+    }
 }
 
 function dragstart (event) {
